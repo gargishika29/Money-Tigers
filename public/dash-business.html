@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dash-business.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/settingbusiness.js"></script>
+    <script src="https://kit.fontawesome.com/20d81f7ef4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+</head>
+
+<body onload="doOnLoad();">
+    <nav class="navbar navbar-expand-lg fw-bold sticky-top" style="background-color: #fff; margin-bottom: 5px;">
+        <div class="container-fluid">
+            <lord-icon src="https://cdn.lordicon.com/wvqpnihn.json" trigger="hover"
+                colors="primary:#f75d5b,secondary:#f75d5b" style="width:50px; height:50px">
+            </lord-icon>
+            <a class="navbar-brand" href="#">
+                Money Tigers</a>
+            <!-- Hamburgur button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-right: auto !important; margin-left: 300px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="btn me-2 fw-bold" style="border: 2px solid #F75D5B; color: #060607;" type="button"
+                        value="Logout" id="btnLogout" id="btnshowsign">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Create Pitcher Profile -->
+    <!-- <div class="px-4 pt-5 my-5 text-center">
+        <h1 class="display-5 fw-bold mb-4" style="color: #F75D5B;">Create Business Profile</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">If You are a invester finder and you want to find the right investor then fill all the mentioned details that is helpful for investor to find the business to invest for and please enter all the details correct and updated.</p>
+        </div> -->
+
+        
+        <!-- Dashboard Of Business Profile -->
+        <div class="py-5 text-center container d-flex flex-wrap" style="gap: 20px;">
+            <div class="col" style="margin-left: 21px;">
+                <div class="card" style="width: 20rem; box-shadow: 0px 4px 3px 1px #fdcfce">
+                    <img src="projectimg/card42.png" class="card-img-top" alt="..." height="300px">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Create Business Profile</h5>
+                        <p class="card-text">You can Create the Business profile here and please enter all the mentioned details.</p>
+                        <a href="/business.html" class="btn fw-bold"
+                            style="border: 2px solid #F75D5B; color: #060607;">Create Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="margin-left: 21px;">
+                <div class="card" style="width: 20rem; box-shadow: 0px 4px 3px 1px #fdcfce">
+                    <img src="projectimg/card7.jpg" class="card-img-top" alt="..." height="300px">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Searching For Investors</h5>
+                        <p class="card-text">Here, you can search the best investors to invest and also find all the mentioned details here.</p>
+                        <a href="/investor-finder.html" class="btn fw-bold"
+                            style="border: 2px solid #F75D5B; color: #060607;">Search Here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="margin-left: 21px;">
+                <div class="card" style="width: 20rem;box-shadow: 0px 4px 3px 1px #fdcfce">
+                    <img src="projectimg/card5.jpg" class="card-img-top" alt="..." height="300px">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Setting</h5>
+                        <p class="card-text">If you want to change password of your id then you can change password from here.</p>
+                        <a href="#" class="btn fw-bold" data-bs-toggle="modal" data-bs-target="#details"
+                            style="border: 2px solid #F75D5B; color: #060607;">Setting</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Dashboard Of Business Profile -->
+
+    <!-- Setting -->
+
+    <div class="modal fade modal-sheet p-4 py-md-5" tabindex="-1" id="details">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2text-uppercase" style="color: #F75D5B;">Change Password</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <form class="" action="" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" id="email"
+                            style=" box-shadow: 0px 4px 3px 1px #fdcfce"   placeholder="name@example.com">
+                            <label for="email">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3 pswd">
+                            <input type="password" class="form-control rounded-3 eyeeee" id="oldpswd" style=" box-shadow: 0px 4px 3px 1px #fdcfce"
+                                placeholder="Password">
+                            <label for="oldpswd">Old Password</label>
+                            <a href="#">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="form-floating mb-3 pswd">
+                            <input type="password" class="form-control rounded-3 eyeeee" id="newpswd" style=" box-shadow: 0px 4px 3px 1px #fdcfce"
+                                placeholder="Password">
+                            <label for="newpswd">New Password</label>
+                            <a href="#">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <input type="button" class="w-100 btn fw-bold btn-lg px-5" value="Change Password" name="changepswd" id="changepswd" style="border: 2px solid #F75D5B; color: #060607;  box-shadow: 0px 4px 3px 1px #fdcfce" id="changepswd">
+                        <div id="result1">*</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Web</title>
+    <script src="https://kit.fontawesome.com/20d81f7ef4.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fw-bold sticky-top" style="background-color: #fff; margin-bottom: 5px;">
+        <div class="container-fluid">
+            <lord-icon src="https://cdn.lordicon.com/wvqpnihn.json" trigger="hover"
+                colors="primary:#f75d5b,secondary:#f75d5b" style="width:50px; height:50px">
+            </lord-icon>
+            <a class="navbar-brand" href="#">
+                Money Tigers</a>
+            <!-- Hamburgur button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-right: auto !important; margin-left: 300px;">
+                    <li class="nav-item">
+                        <a class="nav-link scrollto active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="btn me-2 fw-bold" style="border: 2px solid #F75D5B; color: #060607;"
+                        data-bs-toggle="modal" data-bs-target="#login-modal" type="button" value="Login"
+                        id="btnshowlogin">
+                    <input class="btn me-2 fw-bold" style="border: 2px solid #F75D5B; color: #060607;"
+                        data-bs-toggle="modal" data-bs-target="#signup-modal" type="button" value="Sign Up"
+                        id="btnshowsign">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Login page -->
+    <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl container py-5" role="document">
+            <div class="modal-content row d-flex justify-content-center align-items-center"
+                style="background: none; border: none;">
+                <form class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card text-black" style="border-radius: 1rem; height:450px;">
+                        <div class="card-body text-center">
+                            <div class="mb-md-5 mt-md-4 pb-5">
+                                <div class="modal-header border-bottom-0">
+                                    <h2 class="fw-bold mb-2 text-uppercase" style="color: #F75D5B;">Login</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <p class="text-black-50 mb mt-2">Please enter your id and password!</p>
+                                <div class="form-floating mb-3">
+                                    <input type="email" id="email" class="form-control shadow-sm form-control-lg"
+                                        style=" box-shadow: 0px 4px 3px 1px #fdcfce" />
+                                    <label class="form-label" for="floatingInput">Email</label>
+                                </div>
+                                <div class="form-floating mb-3 pswd">
+                                    <input type="password" id="eyeeee"
+                                        class="shadow-sm form-control form-control-lg eyeeee"
+                                        style=" box-shadow: 0px 4px 3px 1px #fdcfce" />
+                                    <label class="form-label" for="eyeeee">Password</label>
+                                    <a href="#">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <input type="button" class="btn fw-bold btn-lg px-5" value="Login"
+                                    style="border: 2px solid #F75D5B; color: #060607;  box-shadow: 0px 4px 3px 1px #fdcfce"
+                                    id="btnLogin">
+                                <div id="result1">*</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Login Page -->
+
+    <!-- Signup Page -->
+    <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl container py-5" role="document">
+            <div class="modal-content row d-flex justify-content-center align-items-center"
+                style="background: none; border: none;">
+                <form class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card text-black" style="border-radius: 1rem; height:550px;">
+                        <div class="card-body text-center">
+                            <div class="mb-md-5 mt-md-4 pb-5">
+                                <div class="modal-header border-bottom-0">
+                                    <h2 class="fw-bold mb-2 text-uppercase" style="color: #F75D5B;">Sign Up
+                                    </h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <p class="text-black-50 mb mt-2">Please enter your id and password!</p>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control item" id="emaill" name="email"
+                                        style=" box-shadow: 0px 4px 3px 1px #fdcfce" placeholder="name@example.com"
+                                        value="ishikadhuri@gmail.com">
+                                    <label for="floatingInput">Email address</label>
+                                    <!-- <p id="result">*</p> -->
+                                </div>
+                                <div class="form-floating mb-3 pswd">
+                                    <input type="password" class="form-control item eyeeee" id="eyee" name="pswd"
+                                        style=" box-shadow: 0px 4px 3px 1px #fdcfce" placeholder="Password"
+                                        value="Ish123@45">
+                                    <label for="floatingPassword">Password</label>
+                                    <a href="#">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="form-floating mb-3 ">
+                                    <input type="tel" class="form-control item mob" id="mob" name="mob"
+                                        style=" box-shadow: 0px 4px 3px 1px #fdcfce" placeholder="Mobile"
+                                        value="9115671004">
+                                    <label for="floatingPassword">Mobile</label>
+                                </div>
+                                <div class="form-floating mb-3 ">
+                                    <select class="form-select"
+                                        style="border-radius: 10px;  box-shadow: 0px 4px 3px 1px #fdcfce" id="sel"
+                                        aria-label="Default select example" name="sel" required>
+                                        <option selected>Select</option>
+                                        <option value="Investor" id="Investor">Investor</option>
+                                        <option value="Business" id="Business">Investor Finder</option>
+                                    </select>
+                                    <label for="floatingPassword">User Type</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="button" id="btnSignup" class="btn fw-bold  btn-lg px-5"
+                                        value="Create Account"
+                                        style="border: 2px solid #F75D5B; color: #060607;  box-shadow: 0px 4px 3px 1px #fdcfce">
+                                    <div id="result2">*</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Sign Up Page -->
+
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="projectimg/Welcomecarousal1.png" alt="" class="d-block w-100">
+
+            </div>
+            <div class="carousel-item">
+                <img src="projectimg/grow.png" alt="" class="d-block w-100">
+                <div class="container">
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="projectimg/meeting.png" alt="" class="d-block w-100">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End of Carousel -->
+
+    <!-- Services -->
+    <section>
+        <h2 id="services" style="text-align: center; font-weight: bold; font-size: 48px; color: #F75D5B;"> Our Services
+        </h2>
+        <div class="py-5 text-center container d-flex flex-wrap" style="gap: 20px;">
+            <div class="col" style="margin-left: 21px;">
+                <div class="card" style="width: 20rem; box-shadow: 0px 4px 3px 1px #fdcfce">
+                    <img src="projectimg/card11.jpg" class="card-img-top" alt="..." height="300px">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Search for Investor</h5>
+                        <p class="card-text">If you are searching for the person who can invest in your business and
+                            grow
+                            your business to the top level then you can find investors from our site.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="margin-left: 21px;">
+                <div class="card" style="width: 20rem; box-shadow: 0px 4px 3px 1px #fdcfce">
+                    <img src="projectimg/card2.jpg" class="card-img-top" alt="..." height="300px">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold"> Search best Business to Invest</h5>
+                        <p class="card-text">If you are searching to invest in any company and want to grow their
+                            business
+                            to the top level then you can find the best entrepreneur from our site.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="margin-left: 21px;">
+                <div class="card" style="width: 20rem;box-shadow: 0px 4px 3px 1px #fdcfce">
+                    <img src="projectimg/card31.jpg" class="card-img-top" alt="..." height="300px">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Meeting Platform</h5>
+                        <p class="card-text">Our site can eaily provide the way to find the right investor or
+                            entrepreneur you can contact or reach the person directly by the provided information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Services -->
+
+    <!-- About Us -->
+    <section id="about" class="mt-5">
+        <h2 id="about" style="text-align: center; font-weight: bold; font-size: 48px; color: #F75D5B;">About Us</h2>
+        <p style="text-align: center;">Here, you can get to know more about our site</p>
+
+        <div class="row mt-5">
+            <div class="col-lg-6" style="text-align: center;">
+                <img src="projectimg/about.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-5">
+                <p>
+                    <center>
+
+                        We are <span style="font-weight: bold;">Money Tigers!!!!</span> <br>
+                    </center>
+                    Our main motive of this site to connect investors and the new business profiles. Entrepreneur can
+                    take funding from the investors and Investors can give funding to the business profiles.
+                    <br>
+                    With the help of investements the Entrepreneur can take advantages like this:
+                    Taking investments is one way to grow a business. It can be a good option if you need additional
+                    capital to
+                    expand your operations or launch new products and services. Investing can also provide access to
+                    expertise,
+                    connections, and other resources that can help you grow your business.
+                    <br>
+                    With the help of giving investements to the Business the Investor can take advantages like this:
+                    Investing in the stock market provides investors with the opportunity to diversify their
+                    portfolio and reduce their overall risk. By investing in a variety of companies and industries,
+                    investors can
+                    spread out their risk and potentially increase their returns.
+                    Investing in the stock market can provide investors with the potential for high returns.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- End of About Us -->
+
+
+    <!-- Developer -->
+    <!-- <h2 style="margin-top: 50px; text-align: center; font-weight: bold; font-size: 38px; color: #F75D5B;">
+        Meet The Developers</h2>
+    <section class="py-5 text-center container">
+        <div class="row d-flex flex-wrap" style="gap: 20px; margin-left: 65px;">
+            <div class="card col-lg-4 col-md-6 d-flex align-items-stretch"
+                style="width: 20rem; box-shadow: 0px 4px 3px 1px #fdcfce">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="projectimg/me.jpg" class="img-fluid" alt=""
+                            style="border-radius: 60%; height: 250px; margin-top: 20px; margin-bottom: 35px;">
+                    </div>
+                    <div class="member-info">
+                        <h5>Developed By</h5>
+                        <p><b style="font-size:20px;">Ishika Garg</b> <br>
+                            This is my final year project and I am student of MCA at Punjabi University,Patiala.
+                        </p>
+                        <p>
+                            <small class="text-muted">MCA Student</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-lg-4 col-md-6 d-flex align-items-stretch"
+                style="width: 20rem; box-shadow: 0px 4px 3px 1px #fdcfce">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="projectimg/dsc.jpg" class="img-fluid" alt=""
+                            style="border-radius: 60%; height: 250px; margin-bottom: 35px;  margin-top: 20px;">
+                    </div>
+                    <div class="member-info">
+                        <h5>Under the Internal Guidance of</h5>
+                        <p><b style="font-size:20px;">Dr. Gagandeep</b> <br>
+                            Professor at Department of Computer Science in Punjabi University,Patiala.
+                            <br><br>
+                        </p>
+                        <p>
+                            <small class="text-muted">Department of Computer Science</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-lg-4 col-md-6 d-flex align-items-stretch"
+                style="width: 20rem; box-shadow: 0px 4px 3px 1px #fdcfce">
+                <div class="member">
+                    <div class="member-img">
+                        <img src="projectimg/bathindasir.png" class="img-fluid" alt=""
+                            style="border-radius: 60%; height: 250px; margin-bottom: 35px;  margin-top: 20px;">
+                    </div>
+                    <div class="member-info">
+                        <h5>Under the External Guidance of</h5>
+                        <p><b style="font-size:20px;">Rajesh Bansal</b> <br>
+                            Training & Development Head at Sun Soft Technologies and Guide all the project in the
+                            training period.
+                        </p>
+                        <p>
+                            <small class="text-muted">Sun Soft Technologies</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- End of Developer -->
+
+    <!--Contact Us -->
+    <h2 class="mt-5" style="text-align: center; font-weight: bold; font-size: 48px; color: #F75D5B;" id="contact">
+        Contact Us
+    </h2>
+    <p style="text-align: center;">Here, you can contact the developing team if you want.</p>
+
+
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-lg-4" style="text-align: center;">
+            <div class="alert" style="box-shadow: 1px 2px 10px 1px #fdcfce">
+                <i class="bi bi-geo-alt"></i>
+                <h3 class="mt-2">Our Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" style="text-align: center;">
+            <div class="alert" style="box-shadow: 1px 2px 10px 1px #fdcfce">
+                <i class="bi bi-envelope"></i>
+                <h3 class="mt-2">Email Us</h3>
+                <p>ishikadhuri@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6" style="text-align: center;">
+            <div class="alert" style="box-shadow: 1px 2px 10px 1px #fdcfce">
+                <i class="bi bi-telephone"></i>
+                <h3 class="mt-2">Call Us</h3>
+                <p>9115671004</p>
+            </div>
+        </div>
+
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d881754.0093901857!2d75.21626468671109!3d30.312515411444306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102804bba6d66b%3A0x8f2ada618e274451!2sPunjabi%20University%2C%20Patiala!5e0!3m2!1sen!2sin!4v1680580604228!5m2!1sen!2sin"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" frameborder="0" aria-hidden="false" tabindex="0">
+    </iframe>
+    <!-- End of Google Map -->
+
+    <!-- Footer -->
+    <footer class="text-center text-dark" style="background-color: #ECEFF1">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-3"
+            style="color: #060607; background-color:  rgba(0, 0, 0, 0.1)">
+            <!-- Left -->
+            <div class="me-5" style="text-align: center;">
+                <span>Get connected with us on social networks and know more about us:-</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="https://in.pinterest.com/gargishika298/" class="me-4"
+                    style="text-decoration: none; color: #060607;">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+                <a href="https://codepen.com/gargishika29" class="me-4" style="text-decoration: none; color: #060607;">
+                    <i class="fab fa-codepen"></i>
+                </a>
+                <a href="https://google.com" class="me-4" style="text-decoration: none; color: #060607;">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="https://www.instagram.com/gargishika29/" class="me-4"
+                    style="text-decoration: none; color: #060607;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gargishika29/" class="me-4"
+                    style="text-decoration: none; color: #060607;">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/gargishika29" class="me-4" style="text-decoration: none; color: #060607;">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">About Us</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <br>
+                        <lord-icon src="https://cdn.lordicon.com/wvqpnihn.json" trigger="hover"
+                            colors="primary:#f75d5b,secondary:#f75d5b" style="width:50px; height:50px">
+                        </lord-icon>
+                        <p>
+                            The Money Tigers main motive is to connect the Investors and Investor Finders who can find
+                            them at one place.
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Services</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-dark text-decoration-none">Search Investors</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark text-decoration-none">Search Investor Finders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark text-decoration-none">Contact Each Other</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark text-decoration-none">Best Services Offer</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="https://www.instagram.com/gargishika29/" class="text-dark text-decoration-none"><i
+                                    class="fab fa-instagram" style="margin-right: 7px;"></i>Instagram</a>
+                        </p>
+                        <p>
+                            <a href="https://in.pinterest.com/gargishika298/" class="text-dark text-decoration-none"><i
+                                    class="fab fa-pinterest" style="margin-right: 7px;"></i>Pinterest</a>
+                        </p>
+                        <p>
+                            <a href="https://www.linkedin.com/in/gargishika29/"
+                                class="text-dark text-decoration-none"><i class="fab fa-linkedin"
+                                    style="margin-right: 7px;"></i>Linkedin</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/gargishika29" class="text-dark text-decoration-none"><i
+                                    class="fab fa-github" style="margin-right: 7px;"></i>Github</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><i class="fas fa-home" style="margin-right: 7px;"></i>Patiala</p>
+                        <p><i class="fas fa-envelope" style="margin-right: 7px;"></i>ishikadhuri@gmail.com</p>
+                        <p><i class="fas fa-phone" style="margin-right: 7px;"></i>+91 9115671004</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:
+            <a class="text-dark" href="#">MoneyTigers.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- End of Footer -->
+</body>
+
+</html>
